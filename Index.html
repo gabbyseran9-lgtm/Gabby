@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <title>Gab</title>
+  
+  <style> 
+  .text-container {
+    display: flex;
+    gap: 50px;
+    border: .1px solid #ccc;
+    padding: 5px;
+  
+  </style>
+    
+ <p style="font-size: 2em;"> Personal Information.</p>
+<h1 style="font-size: 16px;"> hey Im Gabby seran I taking of Batchelor of Science in Inforamtion Technology I studying in CPSU MPS.  .</h1>
+  
+</head>
+<body>
+  <center> 
+    
+    
+    <p  style="font-size: 2em;"> My Projects</p>
+ 
+
+    <h4> my photo </h4>
+  <img src = "G.jpg" alt= " my photo" width="100" height="100" > 
+  <img src = "gab.jpg" alt= " my photo" width="100" height="100" >
+  <img src = "gabby.jpg" alt= " my photo" width="100" height="100" >
+    
+    <div class="text-container"> 
+      <span>Jersey design </span>
+      <span>Aquaintance party</span>
+      <span>Initiation rights</span>
+      
+    </div>
+    
+    <h5> my video</h5>
+  <video src= "https://youtu.be/0bjr-TXu5jE?si=GvXsu_80XGlZ_iN4" alt="my video" width="100" height="100" controls></video>
+  <video src= "G.mp4" alt="my video" width="100" height="100" controls></video>
+  <video src= "seran.mp4" alt="my video" width="100" height="100" controls></video>
+    
+    <div class="text-container"> 
+      <span>One thing </span>
+      <span>Coffee</span>
+      <span>Movie</span>
+      
+    </div>
+    
+    <p style="font-size: 2em;"> Outpots.</p>
+    </center>
+  
+  <a href = "https://www.canva.com/design/DAGxRuEoYzA/Tuex-nEiMgHtiYslSTrlQg/edit?utm_content=DAGxRuEoYzA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Canva design Portfolio</a><br>
+   <a href = "https://www.figma.com/proto/6oIjTILHEVNEFViqMK72vo/Untitled?node-id=1-5174&p=f&t=bSS35ttZYjz8Eydn-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5174">Figma Design Portfolio</a><br>
+   <a href = "https://www.figma.com/proto/8LYpT7lpyzgnCXgq0OeDAt/Untitled?node-id=1-2&p=f&t=MIt9fZ3rMBn200o0-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2">Figma Design e-commerce</a>
+  
+   <body style="font-family: Arial; background-color: #545454; color: #f2f2f2; margin: 20px;">
+   
+ 
+     
+  <h2>Contact me </h2>
+   
+     <img src="gab².png" alt="Gabby Seran""width="30" height="30" > Gabby A Seran<br>
+     <img src="b.png" alt="Gabby Seran""width="30" height="30" > 09076087016<br>
+     <img src="y.png" alt="Gabby Seran""width="30" height="30" > gabbyseran9@gmail.com<br>
+       
+  <label for="firstname">First Name:</label><br>
+  <textarea id="firstname" name="firstname" rows="1" cols="40"></textarea><br>
+  <label for="lastname">Last Name:</label><br>
+  <textarea id="lastname" name="lastname" rows="1" cols="40"></textarea><br>
+  <label for="Email">Email:</label><br>
+  <textarea id="email" name="email" rows="1" cols="40"></textarea><br>
+  <label for="comments">Message:</label><br>
+  <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Enter your message here..."></textarea>
+  <button type="submit" >Submit</button>
+</body>
+</html>
+
+  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Color Picker</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color:White; 
+      padding-top: 50px;
+    }
+    .color-picker {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Choose Background Color</h1>
+  <input type="color" id="bgColorPicker" class="color-picker">
+  <p>Your choice will be saved.</p>
+
+  <script>
+    const colorPicker = document.getElementById('bgColorPicker');
+
+    // Load saved color on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedColor = localStorage.getItem('backgroundColor');
+      if (savedColor) {
+        document.body.style.backgroundColor = savedColor;
+        colorPicker.value = savedColor;
+      }
+    });
+
+    // Save and apply new color
+    colorPicker.addEventListener('input', () => {
+      const selectedColor = colorPicker.value;
+      document.body.style.backgroundColor = selectedColor;
+      localStorage.setItem('backgroundColor', selectedColor);
+    });
+  </script>
+
+</body>
+</html>
+    
+</body>
+</html>
