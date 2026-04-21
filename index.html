@@ -102,6 +102,36 @@
 </head>
 <body>
 
+  <div id="chat-container" style="position: fixed; bottom: 10px; right: 20px; z-index: 1000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <button id="chat-toggle" style="background: #0084ff; color: white; border: none; width: 60px; height: 60px; border-radius: 50%; font-size: 30px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; transition: transform 0.2s;">
+        <span id="toggle-icon">💬</span>
+    </button>
+
+    <div id="chat-window" style="display: none; width: 330px; height: 450px; background: white; border-radius: 15px; position: absolute; bottom: 80px; right: 0; flex-direction: column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; border: 1px solid #ddd;">
+        <div style="background: #0084ff; color: white; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 10px; height: 10px; background: #31a24c; border-radius: 50%;"></div>
+                <span>Gabby's Assistant</span>
+            </div>
+            <button id="close-chat" style="background:none; border:none; color:white; cursor:pointer; font-size: 10px;">✕</button>
+        </div>
+        
+        <input id="chat-messages" style="flex: 1; padding: 11px; overflow-y: auto; color: #333; font-size: 10px; background: #fff; display: flex; flex-direction: column; gap: 10px;">
+            <div style="background: #e4e6eb; padding: 5px 10px; border-radius: 10px; align-self: flex-start; max-width: 80%; line-height: 1.4;">
+                Hi Gabby! I'm your Messenger bot. How can I help you today?
+            </div>
+        </div>
+
+        <div style="display: flex; padding: 10px; background: white; border-top: 1px solid #eee; align-items: center; gap: 8px;">
+            <input type="text" id="chat-input" placeholder="Type a message " style="flex: 1; border: none; padding: 10px 15px; outline: none; color: black; background: #f0f2f5; border-radius: 10px;">
+            <button type="send" id="sendBtn"style="background: transparent; color: #0084ff; border: none; font-size: 10px; cursor: pointer; font-weight: bold;">Send</button>
+        </div>
+    </div>
+</div>  
+    
+    
+   
+    
 <div class="container">
     <p class="section-title">Personal Information</p>
     <h1 class="content-text">Hey, I'm Gabby Seran. I am taking a Bachelor of Science 
@@ -192,21 +222,20 @@ in Information Technology, studying at CPSU MPS.</h1>
         </div>
     </div>
 
-    <form>
-        <label for="firstname">First Name:</label>
-        <textarea id="firstname" name="firstname" rows="1"></textarea>
+    <form id="contactForm">
+    <textarea<label for="firstname">First Name:</label>></textarea>
+    <input type="text" id="firstname" name="firstname" required>
+    <textarea<label for="lastname">Last Name:</label>></textarea>
+    <input type="text" id<textareainput type="text" id="lastname" name="lastname" required>
 
-        <label for="lastname">Last Name:</label>
-        <textarea id="lastname" name="lastname" rows="1"></textarea>
+    <textarea<label for="email">Email:</label>></textarea>
+    <input type="email" id="email" name="email" required>
 
-        <label for="email">Email:</label>
-        <textarea id="email" name="email" rows="1"></textarea>
-
-        <label for="comments">Message:</label>
-        <textarea id="comments" name="comments" rows="5" placeholder="Enter your message here..."></textarea>
-        
-        <button type="submit">Submit</button>
-    </form>
+   <textarea<label for="comments">Message:</label>></textarea>
+    <textarea id="comments" name="comments" rows="5" placeholder="Enter your message here..." required></textarea>
+   
+    <button type="submit" id="submitBtn">Send Message</button>
+</form>
 
     <div class="color-picker-box">
         <h1>Customize Theme</h1>
@@ -214,8 +243,9 @@ in Information Technology, studying at CPSU MPS.</h1>
         <input type="color" id="bgColorPicker" value="#545454">
         <p>Your choice will be saved automatically.</p>
     </div>
-</div>
 
+  
+        
 <script>
     const colorPicker = document.getElementById('bgColorPicker');
 
